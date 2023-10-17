@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sky invaders</title>
+</head>
+<body>
+	<style type="text/css">
+		#background{
+			background-image: url(canyon.jpg);
+			background-size:cover;
+			width: 900px;
+			height: 700px;
+		}
+		.player{
+			position: absolute;
+			background-image: url(Jet-Fighter.png);
+			width: 70px;
+			height: 75px;
+			
+		}
+		.enemy{
+			position: absolute;
+			background-image: url(jet.png);
+			background-size:cover;
+			width: 70px;
+			height: 75px;
+			
+		}
+	</style>
+
+	<div id="background">
+		<div id="players"></div>
+		<div id="enemies">
+			<div class="enemy"></div>
+		</div>
+	</div>
+
+
+
+
+	<script type="text/javascript">
+	var player= {
+		left:450,
+		top:620
+	}
+	var enemies=[
+		{left:400,top:50},{left:480,top:100},
+		{left:320,top:150},{left:240,top:100},
+		{left:640,top:150},{left:560,top:50}
+	]
+	function drawPlayer (){
+		
+		content="<div class='player' style=left:"+player.left+"px;top:"+player.top+"px></div>"
+		document.getElementById("players").innerHTML=content;
+	}
+	drawPlayer();
+	function drawEnemies (){
+		content='';
+		for(var i=0;i<enemies.length;i++){
+			content+="<div class='enemy' style=left:"+enemies[i].left+"px;top:"+enemies[i].top+"px></div>"
+		}
+		
+		document.getElementById("enemies").innerHTML=content;
+	}
+	drawEnemies();
+	document.onkeydown=function(e) {
+		console.log(e);
+		if(e.keyCode == 37 &&player.left>0) { // LEFT
+			player.left = player.left- 10;
+		}
+		else if (e.keyCode == 39 && player.left<840) { // RIGHT		
+			player.left = player.left+ 10;
+		}
+		else if (e.keyCode == 38 && player.top>450) { // top***
+			player.top = player.top- 10;
+		}
+		else if (e.keyCode == 40 && player.top<625) { // DOWN
+			player.top = player.top+ 10;
+		}
+		drawPlayer();
+	}
+	</script>
+</body>
+</html>

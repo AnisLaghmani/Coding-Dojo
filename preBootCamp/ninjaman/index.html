@@ -1,0 +1,178 @@
+<html>
+    <head>
+        <title>Ninja Man</title>
+        <style type="text/css">
+            *{
+                padding:0;
+                margin:0;
+            }
+            .row{
+                line-height: 0;
+            }
+            .wall{
+                background-color: blue;
+                height:40px;
+                width: 40px;
+                display: inline-block;
+            }
+            .sushi{
+                background-color: rgb(0, 0, 0);
+                height:40px;
+                width: 40px;
+                display: inline-block;
+                background-image: url(sushi.png);
+                background-size: contain;
+            }
+            .onigiri{
+                background-color: rgb(0, 0, 0);
+                height:40px;
+                width: 40px;
+                display: inline-block;
+                background-image: url(onigiri.png);
+                background-size: contain;
+            }
+            .blank{
+                background-color: rgb(0, 0, 0);
+                height:40px;
+                width: 40px;
+                display: inline-block;
+            }
+            #ninjaman{
+                background-color: rgb(0, 0, 0);
+                height:40px;
+                width: 40px;
+                display: inline-block;
+                background-image: url(ninja.gif);
+                background-size: contain;
+                position:absolute;
+                left: 40;
+                top: 40;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <div id='world'></div>
+        <div id='ninjaman'></div>
+      
+        <script type="text/javascript">
+            function random(min, max) {
+                return Math.floor(Math.random() * (max - min + 1) ) + min;
+                }
+            var world=[
+                [1,1,1,1,1,1,1,1,1,1,1,1,1],
+                [1,0,2,3,2,2,random(1,3),2,2,3,random(1,3),2,1],
+                [1,2,random(1,3),3,2,3,random(1,3),3,2,random(1,3),2,3,1],
+                [1,2,2,2,random(1,3),2,2,3,2,random(1,3),3,random(1,3),1],
+                [1,2,random(1,3),random(2,3),2,3,random(1,3),2,2,2,2,3,1],
+                [1,2,2,2,random(1,3),2,2,3,3,random(1,3),random(1,3),2,1],
+                [1,random(1,3),2,2,random(1,3),2,2,random(1,3),2,2,3,2,1],
+                [1,2,random(1,3),3,2,3,2,random(1,3),2,3,random(1,3),3,1],
+                [1,2,2,2,2,3,random(1,3),2,2,2,random(1,3),2,1],
+                [1,1,1,1,1,1,1,1,1,1,1,1,1],
+            ];
+            var worldDict= {
+                0:'blank',
+                1:'wall',
+                2:'sushi',
+                3:'onigiri'
+            }
+          
+            function drawWorld(){
+                output="";
+                for (var row=0;row<world.length;row++){
+                    output+="<div class ='row'>"
+                    for ( var x=0;x<world[row].length;x++){
+                        output+="<div class='"+worldDict[world[row][x]]+"'></div>"
+                    }
+                    output+="</div>"
+                }
+                document.getElementById('world').innerHTML=output;
+                
+            }
+            drawWorld();
+            
+            var ninjaman={
+                x:1,
+                y:1
+            }
+            function drawNinjaman(){
+                document.getElementById('ninjaman').style.left = ninjaman.x*40+'px'
+				document.getElementById('ninjaman').style.top = ninjaman.y*40+'px'
+            }
+            drawNinjaman()
+            function sushiCount(){
+             var ts=0;
+             for (var i=0;i<world.length;i++){
+                    for ( var j=0;j<world[i].length;j++){
+                        if (world[i][j]==2){
+                        ts++;
+                       }
+                    }
+                }   
+                return ts ;
+            }
+            function onigiriCount(){
+             var to=0;
+             for (var i=0;i<world.length;i++){
+                    for ( var j=0;j<world[i].length;j++){
+                       if (world[i][j]==3){
+                        to++;
+                       }
+                    }
+                }   
+                return to ;
+            }
+            var  as=sushiCount();
+            var  ao=onigiriCount(); 
+            let sE;
+            let oE; 
+			document.onkeydown = function(e){
+				
+					if(e.keyCode == 37) { // LEFT
+						if(world[ninjaman.y][ninjaman.x-1]!=1){
+                            ninjaman.x--;
+                           
+                        }
+                    }    
+					else if (e.keyCode == 39) { // RIGHT
+                        if(world[ninjaman.y][ninjaman.x+1]!=1){
+						    ninjaman.x++; 
+                            
+						}   		
+                    }
+					else if (e.keyCode == 38) { // top***
+                        if(world[ninjaman.y-1][ninjaman.x]!=1){
+						    ninjaman.y--;   
+                            
+						}		
+                    }
+					else if (e.keyCode == 40) { // DOWN
+                        if(world[ninjaman.y+1][ninjaman.x]!=1){
+						    ninjaman.y++; 
+                            
+						}
+                    }  
+                
+                world[ninjaman.y][ninjaman.x]=0
+                  
+                drawNinjaman() 
+                drawWorld()
+                                  
+                sE=as-sushiCount();
+                console.log(sE)
+                
+                oE=ao-onigiriCount();
+                console.log(oE)
+                document.getElementById("sushiscore").textContent = sE;
+                document.getElementById("onigiriscore").textContent = oE;      
+                
+            } 
+            
+
+        </script>
+        <h2><img src="sushi.png">Sushi: <span id="sushiscore">0</span></h2>
+        <h2><img src="onigiri.png">Onigiri: <span id="onigiriscore">0</span></h2>
+    </body>
+
+</html>
