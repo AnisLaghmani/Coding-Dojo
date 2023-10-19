@@ -71,8 +71,6 @@ if (x[counter]>0){
 }
 console.log(x);
 console.log(counter);
-
-
 //-----------Level_5----------
 //challenge1
 for (var i=0;i<10;i++){
