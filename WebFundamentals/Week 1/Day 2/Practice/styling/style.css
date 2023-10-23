@@ -1,0 +1,19 @@
+* {font-family:Arial, Helvetica, sans-serif}
+h1 {
+    background-color: black;
+    color: white;
+    }
+h2 {
+    text-align: center;
+    background-color:blueviolet;
+    color: white;
+    }
+h3 {
+    text-decoration: underline;
+    background-color: skyblue;
+    text-align: right;
+    color: indigo;
+    }
+span {
+    color: aqua;
+    }
