@@ -1,4 +1,26 @@
+button{
+    display: block;
+    margin: 20px;
+}
 #search {
-    border-radius: ;
-    border: ;
+    border-radius:50px ;
+    border: 2px solid;
+    border-color: rgb(0, 174, 142);
+    background-color: antiquewhite;
+    color: rgb(0, 174, 142);
+    
+}
+#add {
+    border-radius:100%;
+    border: 4px ;
+    border-color: green;
+    background-color: green;
+    color: white;
+    
+}
+#submit {
+    border-color: black;
+    background-color: cyan;
+    color: white;
+    box-shadow: 3px 3px rgb(0, 0, 0) ;
 }
