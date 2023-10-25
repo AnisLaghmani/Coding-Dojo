@@ -1,0 +1,36 @@
+
+h1{
+    display: block;
+    text-align: center;
+    height: 80px;
+    font-size:50px;
+}
+h5{
+    text-align: center;
+}
+img {
+    height: 200px;
+}
+body{
+    border: 1px black solid;
+    margin: 20px;
+    background-color: #FCF7DE;
+}
+.mystic{
+    margin: 20px;
+    display: flex;
+    justify-content:space-around;
+    background-color: whitesmoke;
+}
+.comic{
+    margin: 20px;
+    display: flex;
+    justify-content:space-around;
+    background-color: #DEF3FD;
+}
+.dccomics{
+    margin: 20px;
+    display: flex;
+    justify-content:space-around;
+    background-color: #F0DEFD;
+}
