@@ -1,31 +1,24 @@
 *{
     margin: 0px;
     padding: 0px;
-    font-family: 'Comic Neue', cursive;
 }
 .nav{
     display :flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px 0px 100px;
     color: white;
-    background-color: rgb(51,51,51);
-    position: sticky;
-    
+    background-color: rgb(0,0,0);
+    height: 80px;
 }
-.nav-title{
-    margin-left: 20px;
 
-}
 .nav ul{
 display: flex;
-justify-content:end;  
 list-style:none; 
 align-items: center;
+gap:20px;
 }
-li{
-padding-right: 20px;
-
-}
-a{
+.nav a{
 text-decoration: none;
 color: white;
 }
@@ -36,22 +29,27 @@ color: white;
     background-color:rgb(23,162,184);
     color: white;
     border: 3px black solid;
-    box-shadow: 3px 3px black ;
+    box-shadow: 3px 3px 2px 1px black ;
     height: 30px;
+    width: 90px;
+}
+.maincontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position:absolute;
+    top: 120px;
+    left: 80px;
+    gap: 20px;
+    /*border: 1px black solid;*/
 }
 .userCard{
-    width: 400px;
+    width: 450px;
     min-height: 300px;
-    position:absolute;
-    top: 80px;
-    left: 80px;
 }
 .Education{
-    width: 400px;
-    min-height: 300px;
-    position:absolute;
-    left: 80px;
-    top:420px;
+    width: 450px;
+    min-height: 200px;
     border: 2px silver solid;
 
 }
@@ -82,9 +80,83 @@ color: white;
 h1{
     font-weight: bold;
 }
-img[alt="circle"]{
+.maincontainer img[alt="circle"]{
     width: 75px;
     position:absolute;
     top: 38px;
     left: 20px;
+}
+.Education div{
+    padding:15px;
+    display:flex;
+    flex-direction: column;
+    gap:15px;
+}
+.Education > h3 {
+    background-color: rgb(51,51,51);
+    color:white;
+    padding:15px;
+
+}
+.shadow{
+    color: gray;
+}
+.dojo h3{
+    font-weight: bold;
+}
+.sidecontainer{
+    position:absolute;
+    top: 120px;
+    left: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 30px;
+}
+.sidecontainer p{
+    padding: 15px 0px 0px 15px;
+}
+.followrequest{
+    width: 250px;
+    min-height: 150px;
+    border: 2px grey solid;
+}
+.connections{
+    width: 250px;
+    min-height: 150px;
+    border: 2px grey solid;
+}
+.followrequest > h3 {
+    background-color: rgb(51,51,51);
+    color:white;
+    padding:15px;
+}
+.connections > h3 {
+    background-color: rgb(51,51,51);
+    color:white;
+    padding:15px;
+}
+.connections > h4 {
+    border-top: 2px grey solid;
+    color:white;
+    padding:10px;
+    margin-top: 10px;
+}
+.sidecontainer img{
+    width: 20px;
+    margin-right: 10px;
+    vertical-align:bottom;
+}
+#btn2{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
+#btn500{
+    border-radius: 50%;
+    height: 30px;
+    width: 50px;
+}
+img[alt="accept"] {
+margin-left: 90px;
 }

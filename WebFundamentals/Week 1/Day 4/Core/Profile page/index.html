@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="nav">
@@ -19,21 +16,50 @@
             <li><button class="btn">Sign Out</button></li>
         </ul>
     </div>
-    <main class="userCard">
-        <div class="bleu"></div>
-        <div class="white">
-            <h1>Jane Doe</h1>
-            <h3><img src="/assets/map-marker.png" alt="map"> Seattle</h3>
-            <div class="description">
-                <p>Developer <span>|</span> Engineer <span>|</span> Problem Solver</p>
-                <p>Master of shadows and the Internet!</p>
+    <main>
+        <div class="maincontainer">
+            <div class="userCard">
+                <div class="bleu"></div>
+                <div class="white">
+                    <h1>Jane Doe</h1>
+                    <h3><img src="/assets/map-marker.png" alt="map"> Seattle</h3>
+                    <div class="description">
+                        <p>Developer <span>|</span> Engineer <span>|</span> Problem Solver</p>
+                        <p>Master of shadows and the Internet!</p>
+                    </div>
+                    <a href="#"><img src="/assets/gear.png" alt="gear">edit profile</a>
+                </div>
+                <img src="/assets/user-circle.png" alt="circle">
             </div>
-            <a href="#"><img src="/assets/gear.png" alt="gear">edit profile</a>
+            <div class="Education">
+                <h3>Education</h2>
+                <div class="dojo">
+                    <h3>Coding dojo - Full Stack Bootcamp</h3>
+                    <p class="shadow">Dec 2019 - Mar 2020</p>
+                    <p class="educationdescription">Triple black belt in Python MERN and C#</p>
+                </div>
+                <div class="dojo2">
+                    <h3>Coding dojo - Full Stack Bootcamp</h3>
+                    <p class="shadow">Dec 2018 - Mar 2019</p>
+                    <p class="educationdescription">Black belt in data analytics</p>
+                </div>
+            </div>
+        </div>    
+        <div class="sidecontainer">
+            <div class="followrequest">
+                <h3><button id="btn2">2</button> Connections requests</h3>
+                <p class="name"><img src="/assets/user-circle.png" alt="circle">Todd E<img src="/assets/accept-circle.png" alt="accept"><img src="/assets/close-circle.png" alt="not"></p>
+                <p class="name"><img src="/assets/user-circle.png" alt="circle">Phil K <img src="/assets/accept-circle.png" alt="accept"><img src="/assets/close-circle.png" alt="not"></p>
+            </div>
+            <div class="connections">
+                <h3><button id="btn500">500+</button> Your connections</h3>
+                <p class="name"><img src="/assets/user-circle.png" alt="circle">Adrien D</p>
+                <p class="name"><img src="/assets/user-circle.png" alt="circle">Anne J</p>
+                <p class="name"><img src="/assets/user-circle.png" alt="circle">Arry Y</p>
+                <p class="name"><img src="/assets/user-circle.png" alt="circle">Allayne T</p>
+                <h4 class="more"><a href="#">View More</a></h4>
+            </div>
         </div>
-        <img src="/assets/user-circle.png" alt="circle">
-    </main>
-    <main class="Education">
-        <h2>Education</h2>
-    </main>
+    </main>    
 </body>
 </html>
