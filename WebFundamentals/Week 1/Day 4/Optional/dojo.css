@@ -1,0 +1,49 @@
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ /* Fixed width container class that will "auto-center" itself */
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+.navBar{
+    display :flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    color: white;
+    background-color: rgb(51,51,51);
+    height: 80px;
+}
+.navBar > ul{
+    display: flex;
+    list-style:none; 
+    align-items: center;
+    gap:20px;
+}
+#searchBTN {
+    border-radius:50px ;
+    border: 2px solid;
+    border-color: rgb(0, 174, 142);
+    background-color: antiquewhite;
+    color: rgb(0, 174, 142);
+    
+}
+#submitBTN {
+    border-color: black;
+    background-color: cyan;
+    color: white;
+    box-shadow: 3px 3px rgb(0, 0, 0) ;
+}
+.row {
+    display: flex;
+}
+.col {
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    background-color: lightcyan;
+}
