@@ -1,0 +1,103 @@
+* {
+    margin: 0 auto;
+    padding: 0 ;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navBar{
+    display :flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 20px;
+    background-color: rgb(204,204,204);
+    height: 70px;
+    font-size: 30px;
+}
+#middleNav{
+    height: 30px;
+    min-width: 300px;
+    border: 2px black solid;
+    padding-left: 20px;
+}
+#rightNav{
+    background-color:rgb(43,120,228);
+    font-size:medium;
+    color: white;
+    border: 3px black solid;
+    box-shadow: 3px 3px 2px 1px black ;
+    height: 30px;
+    width: 90px;
+}
+.main{
+    display: flex;
+    justify-content:stretch;
+    gap: 30px;
+    padding-top: 30px;
+}
+.mainRight{
+    flex:1;
+    /* outline: 1px red solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+}
+.boxRight {
+    font-size: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+    font-weight: bold;
+    border: 3px rgb(90,90,90) solid;
+    min-height: 200px;
+    min-width: 300px;
+}
+#addBtn{
+    background-color: rgb(147, 196, 125);
+    border: 2px black solid;
+    box-shadow: 4px 4px 2px 1px black ;
+    font-weight: bold;
+    font-size:large;
+    padding: 5px 20px;
+    margin-top: 20px;
+    min-height: 40px;
+    min-width: 200px;
+}
+.mainLeft{
+    flex:2;
+    /* outline: 2px blue solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+}
+.boxLeft {
+    font-size: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+    font-weight: bold;
+    border: 3px rgb(90,90,90) solid;
+    min-height: 250px;
+    min-width: 500px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.boxLeft li {
+    list-style: none;
+    margin: 20px 50px 0 0;
+    
+}
+#plural{
+    font-size:medium;
+}
+#likeBtn{
+    background-color:rgb(255,217,102);
+    font-size:medium;
+    font-weight: bold;
+    color: black;
+    border: 3px black solid;
+    box-shadow: 3px 3px 2px 1px black ;
+    min-height: 30px;
+    min-width: 100px;
+    padding: 8px 20px 8px 20px;
+}
+
+

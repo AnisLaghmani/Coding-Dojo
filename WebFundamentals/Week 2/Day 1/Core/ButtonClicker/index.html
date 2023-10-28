@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojonary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navBar">
+            <H1 id="leftNav">Dojonary</H1>
+            <input type="search" name="search" id="middleNav" placeholder="search">
+            <button class="btn" id="rightNav" onclick="log(this)">Login</button>
+        </nav>
+        <div class="main">
+            <div class="mainLeft">
+                <div class="boxLeft">
+                    <ul>
+                        <li><h2><strong>ninja</strong></h2></li>
+                        <li><i>noun</i></li>
+                        <li id="plural">Plural:ninjas</li>
+                        <li><button class="btn" id="likeBtn" onclick="alert('Ninja was liked')">13 likes</button></li>
+                    </ul>
+                    <p class="description">A practitioner skilled in the <a href="https://en.wikipedia.org/wiki/Japan">Japanese</a> art of <a href="https://fr.wikipedia.org/wiki/Ninjutsu">ninjutsu</a></p>
+                </div>
+                <div class="boxLeft">
+                    <ul>
+                        <li><h2><strong>ninja</strong></h2></li>
+                        <li><i>noun</i></li>
+                        <li id="plural">Plural:ninjas</li>
+                        <li><button class="btn" id="likeBtn" onclick="alert('Ninja was liked')">37 likes</button></li>
+                    </ul>
+                    <p class="description">A <a href="https://en.wikipedia.org/wiki/Programmer">programmer</a> who breaks down problems with <a href="https://fr.wikipedia.org/wiki/Zen">zen</a>-like focus</p>
+                </div>
+                
+            </div>
+            <div class="mainRight">
+                <div class="boxRight">
+                    <p>Dojonary is defined by YOU</p>
+                    <button class="btn" id="addBtn" onclick="hide(this)">Add Definition</button>
+                </div>
+                <div class="boxRight">
+                    <p>Dojonary is defined by YOU</p>
+                    <button class="btn" id="addBtn" onclick="hide(this)">Add Definition</button>
+                </div>
+                <div class="boxRight">
+                    <p>Dojonary is defined by YOU</p>
+                    <button class="btn" id="addBtn" onclick="hide(this)">Add Definition</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
