@@ -1,0 +1,150 @@
+#variable declaration
+num1 = 42
+
+#data types:
+#primitive:
+
+# numbers:
+num2 = 2.3
+
+#boolean:
+boolean = True
+
+#strings:
+string = 'Hello World'
+
+#composite:
+#list
+pizza_toppings = ['Pepperoni', 'Sausage', 'Jalepenos', 'Cheese', 'Olives']
+
+#dictionary
+person = {'name': 'John', 'location': 'Salt Lake', 'age': 37, 'is_balding': False}
+
+#tuple
+fruit = ('blueberry', 'strawberry', 'banana')
+
+#log statement
+#type check
+print(type(fruit))
+
+#list acces value
+print(pizza_toppings[1])
+
+#addvalue to list
+pizza_toppings.append('Mushrooms')
+
+#access dictionary value
+print(person['name'])
+
+#change name value of person dict
+person['name'] = 'George'
+
+#add new key and value to dict
+person['eye_color'] = 'blue'
+#acces tuple
+print(fruit[2])
+
+#conditional if
+if num1 > 45:
+    print("It's greater")
+#conditional else
+else:
+    print("It's lower")
+
+#length check
+if len(string) < 5:
+    print("It's a short word!")
+#conditional else and if
+elif len(string) > 15:
+    print("It's a long word!")
+else:
+    print("Just right!")
+
+#for loop with stop
+for x in range(5):
+    print(x)
+#for loop start and stop
+for x in range(2,5):
+    print(x)
+#for loop start stop and step
+for x in range(2,10,3):
+    print(x)
+
+#while start
+x = 0
+#while stop
+while(x < 5):
+    print(x)
+#while increment
+    x += 1
+
+
+pizza_toppings.pop()
+pizza_toppings.pop(1)
+
+print(person)
+
+
+person.pop('eye_color')
+print(person)
+
+for topping in pizza_toppings:
+    if topping == 'Pepperoni':
+#continue loop
+        continue
+    print('After 1st if statement')
+    if topping == 'Olives':
+#loop break
+        break
+
+#function
+def print_hello_ten_times():
+    for num in range(10):
+        print('Hello')
+
+print_hello_ten_times()
+
+# x function parameter
+def print_hello_x_times(x):
+    for num in range(x):
+        print('Hello')
+
+
+print_hello_x_times(4)
+
+
+def print_hello_x_or_ten_times(x = 10):
+    for num in range(x):
+        print('Hello')
+
+print_hello_x_or_ten_times()
+print_hello_x_or_ten_times(4)
+
+
+#comment-multi-line
+
+"""
+Bonus section
+"""
+
+#comment-single line
+
+- NameError: name <variable name> is not defined
+# print(num3)
+
+# num3 = 72
+
+#- TypeError: 'tuple' object does not support item assignment
+# fruit[0] = 'cranberry'
+
+#KeyError: 'favorite_team'
+# print(person['favorite_team'])
+
+#IndexError: list index out of range
+# print(pizza_toppings[7])
+
+#   print(boolean)
+#AttributeError: 'tuple' object has no attribute 'append'
+# fruit.append('raspberry')
+#AttributeError: 'tuple' object has no attribute 'pop'
+# fruit.pop(1)
