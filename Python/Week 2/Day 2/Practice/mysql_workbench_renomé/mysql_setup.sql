@@ -1,0 +1,11 @@
+SELECT * FROM names.names;
+INSERT INTO names (name) VALUES ("khaireddine");
+INSERT INTO names (name) VALUES ("ala"),("anis");
+UPDATE names SET name="alamohsni" where id=2;
+INSERT INTO names (name) VALUES ("rayan");
+SELECT * FROM names.names;
+DELETE FROM names WHERE id=4;
+DELETE FROM names WHERE id=5;
+DELETE FROM names WHERE id=6;
+DELETE FROM names WHERE id=7;
+DELETE FROM names WHERE id=8;
