@@ -14,8 +14,18 @@ def home():
 def dashboard():
     if not 'user_id' in session:
         return redirect('/')
-    all_partys=Party.get_all()
+    all_partys=Party.get_all_with_poster()
     return render_template('dashboard.html',all_partys=all_partys)
+
+
+@app.route('/my_partys')
+def my_partys():
+    if not 'user_id' in session:
+        return redirect('/')
+    # ----------------------!!!!!!!!!!!!!!!!!!!
+    all_partys=Party.get_all_by_user_id({'user_id':int(session["user_id"])})
+    return render_template('my_partys.html',all_partys=all_partys)
+
 
 @app.route('/register', methods=['post'])
 def register():
@@ -45,3 +55,8 @@ def login():
 def logout():
     session.clear()
     return redirect("/")
+
+@app.route('/participate/<int:party_id>')
+def participate(party_id):
+    Party.participate({"party_id":party_id,"user_id":int(session["user_id"])})
+    return redirect (f'/partys/{party_id}')

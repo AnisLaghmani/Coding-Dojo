@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <title>Party Posts</title>
+</head>
+<body>
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center m-5">
+            <h1 class="display-4">{{party.title}} !</h1>
+            <form action="/logout" method="post"><input class="btn btn-dark" type="submit" value="LogOut"></form>
+        </div>
+        {%if party.user_id != session.user_id and party.is_in==0 %}
+        <a href="/participate/{{party.id}}" class="btn btn-success">Participate</a>
+        {%else%}
+        <a href="/un_participate/{{party.id}}" class="btn btn-danger">Un-Participate</a>
+
+        {%endif%}
+        <div>
+            <p> Posted By :{{party.poster.first_name}} {{party.poster.last_name}}</p>
+            <p> Location :{{party.location}}</p>
+            <p> When :{{party.date}}</p>
+            {%if party.all_ages==1%}
+                <p>All ages Welcome : True</p>
+            {%else%}
+                <p>All ages Welcome : False</p>
+            {%endif%}
+            <p>Description: {{party.description}}</p>
+            <a class="btn btn-dark me-3" href="/dashboard">Home</a>
+        </div>
+    </div>
+</body>
+</html>

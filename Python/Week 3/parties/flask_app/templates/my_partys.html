@@ -9,10 +9,9 @@
 <body>
     <div class="container">
         <div class="d-flex justify-content-between align-items-center m-5">
-            <h1 class="display-4">Welcome, {{session['first_name']}} !</h1>
-            <div class="d-flex gap-2"><a class="btn btn-primary" href="/my_partys">My Parties</a><form action="/logout" method="post"><input class="btn btn-dark" type="submit" value="LogOut"></form></div>
+            <h1 class="display-4">{{session['first_name']}}'s Parties !</h1>
+            <a class="btn btn-primary" href="/dashboard">Home</a>
         </div>
-        <p class="ms-5">All the Cool Parties We Know About</p>
         <table class="table table-dark m-5 mt-3">
             <thead>
                 <tr>
@@ -20,8 +19,6 @@
                     <th>Location</th>
                     <th>Date</th>
                     <th>All_ages</th>
-                    <th>Posted By ID</th>
-                    <th>Posted By</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -36,8 +33,6 @@
                     {%else%}
                     <td>False</td>
                     {%endif%}
-                    <td>{{party.user_id}}</td>
-                    <td>{{party.owner}}</td>
                     <td><a class="btn btn-success" href="/partys/{{party.id}}">View</a>
                         {%if session.user_id==party.user_id%}
                         <a class="btn btn-warning" href="/partys/{{party.id}}/edit">Edit</a><a class="btn btn-danger"  href="/partys/{{party.id}}/destroy">Cancel</a>
@@ -47,7 +42,6 @@
                 {%endfor%}
             </tbody>
         </table>
-        <a class="btn btn-info m-5" href="/partys/new">Plan a Party</a>
     </div>
 </body>
 </html>
