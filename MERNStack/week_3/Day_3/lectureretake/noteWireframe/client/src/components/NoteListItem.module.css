@@ -1,0 +1,35 @@
+.note{
+    background-color: antiquewhite;
+    width: 80%;
+    margin : 0 auto;
+    padding:  10px 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px 0px;
+}
+.deleteBtn{
+    width:100px;
+    background-color: brown;
+    height: 40px;
+    color: bisque;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px;
+}
+.editBtn{
+    width:100px;
+    background-color: chocolate ;
+    height: 40px;
+    color: bisque;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px;
+}
+.viewBtn{
+    width:100px;
+    background-color: rgb(192, 210, 30) ;
+    height: 40px;
+    color: bisque;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px;
+}

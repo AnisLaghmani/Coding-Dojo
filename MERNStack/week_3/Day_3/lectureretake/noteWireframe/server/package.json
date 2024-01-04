@@ -1,0 +1,27 @@
+{
+  "name": "notes_app_backend",
+  "version": "1.0.0",
+  "description": "Notes App RestAPI NodeJS Express",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest -- coverage",
+    "start": "nodemon server.js"
+  },
+  "keywords": [
+    "NodeJS",
+    "RestAPIs",
+    "Server",
+    "Backend"
+  ],
+  "author": "anisLaghmani",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
