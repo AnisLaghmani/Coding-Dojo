@@ -10,6 +10,8 @@ app.use( express.urlencoded({ extended: true }) );
 app.use(cors())
 //-----import routes
 require('./routes/note.routes')(app);
+require('./routes/user.routes')(app);
+
 //-------connect with DB
 require('./config/mongoose.config')();
 // ----Run server
