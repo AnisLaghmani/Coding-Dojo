@@ -4,3 +4,4 @@ function factorial(num){
 }
 x=factorial(7);
 console.log(x);
+
